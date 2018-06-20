@@ -22,7 +22,7 @@ var xmplOnReady = function()
 
 function slackNotification(message){
     // This needs to be our incoming webhook, setup in our Slack app.
-    var webhookURL = "https://hooks.slack.com/services/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";
+    var webhookURL = "https://hooks.slack.com/services/url";
     var invocation = new XMLHttpRequest();
     if(invocation) {
         invocation.open("POST", webhookURL, true);
@@ -50,10 +50,7 @@ function fireZapier() {
             resourceDriver.getRecipientADORs(xmpControllerDriverVar.xmp.recipientID, inOptions, function (data) {
 
                 // Set correct endpoint, based on flavour
-                if (data['Flavor'] == 'BB'){var url = 'https://hooks.zapier.com/hooks/catch/124616/k8rm29/'; console.log('Added BB capsule...');}
-                if (data['Flavor'] == 'FB'){var url = 'https://hooks.zapier.com/hooks/catch/124616/k8z7zj/'; console.log('Added FB capsule...');}
-                if (data['Flavor'] == 'HB'){var url = 'https://hooks.zapier.com/hooks/catch/124616/k8ky6w/'; console.log('Added HB capsule...');}
-                if (data['Flavor'] == 'DM'){var url = 'https://hooks.zapier.com/hooks/catch/124616/k8zl76/'; console.log('Added DM capsule...');}
+                if (data['Flavor'] == 'BB'){var url = 'https://hooks.zapier.com/hooks/catch/124616/url/'; console.log('Added BB capsule...');}
 
                 // Fire off the POST to the Zapier Web Service
 
